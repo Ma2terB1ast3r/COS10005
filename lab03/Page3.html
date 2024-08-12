@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COS10005 - Lab 03</title>
+</head>
+<body>
+    <h1>Unit Delivery Survey</h1>
+    <form id="survery" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+        <fieldset>
+            <p>
+                <label>Which browser do you know how to use? (Check all that applies)
+                </label>
+            </p>
+            <label>Chrome
+                <input name="browsers[]" type="checkbox" value="Chrome">
+            </label>
+            <br>
+
+            <label>Firefox
+                <input name="browsers[]" type="checkbox" value="Firefox">
+            </label>
+            <br>
+
+            <label>Internet Explorer
+                <input name="browsers[]" type="checkbox" value="IE">
+            </label>
+            <br>
+
+            <label>Safari
+                <input name="browsers[]" type="checkbox" value="Safari">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <p>
+                <label>Which text editor do you know how to use? (Check all that applies)
+                </label>
+            </p>
+            <label>Komodo
+                <input name="editors[]" type="checkbox" value="Komodo">
+            </label>
+            <br>
+
+            <label>Notepad++
+                <input name="editors[]" type="checkbox" value="Notepad++">
+            </label>
+            <br>
+
+            <label>Sublime Text
+                <input name="editors[]" type="checkbox" value="Sublime">
+            </label>
+            <br>
+
+            <label>Wrangler
+                <input name="editors[]" type="checkbox" value="Wrangler">
+            </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <a href="Page2.html">Previous</a>
+    <a href="Page4.html">Next</a>
+</body>
+</html>

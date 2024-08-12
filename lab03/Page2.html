@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COS10005 - Lab 03</title>
+</head>
+<body>
+    <h1>Unit Delivery Survey</h1>
+    <p>Please enter your name, gender, and degree program below:</p>
+    <form id="survery" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+        <p><label>Name (optional): <input type="text" name="fname" size="20"></label></p>
+        <p>
+            <label>Gender:</label>
+            <br>
+            <label>Male
+                <input type="radio" name="gender" value="M">
+            </label>
+            <br>
+            <label>Female
+                <input type="radio" name="gender" value="F">
+            </label>
+            <br>
+            <label>Other
+                <input type="radio" name="gender" value="O">
+            </label>
+        </p>
+        <p>
+            <label>
+                Degree of Program:
+                <select name="degree">
+                    <option value="ict">IT</option>
+                    <option value="cps">Comp Sci</option>
+                    <option value="cyb">Cyber Sec</option>
+                </select>
+            </label>
+        </p>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <a href="index.html">Previous</a>
+    <a href="Page3.html">Next</a>
+</body>
+</html>
