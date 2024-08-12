@@ -1,0 +1,5 @@
+/* Styles to make the table match */
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
