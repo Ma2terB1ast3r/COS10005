@@ -1,0 +1,73 @@
+/* Fonts */
+h1, h2, h3, h4, h5, h6, p, a, li{
+    font-family: Arial, sans-serif;
+}
+
+/* Nav bar */
+nav {
+    overflow: hidden;
+    height: auto;
+    background-color: darkgray;
+}
+nav > ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+nav > ul > li > a {
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+    text-align: center;
+    /* padding: 12px 12px; */
+    padding: 0.2em 0.6em;
+    width: 6em;
+    transition: 400ms;
+    border: 1px solid white;
+}
+nav > ul > li > a:hover {
+    background-color: brown;
+}
+
+main {
+    float: left;
+    width: 70%;
+}
+
+article {
+    background-color: lightgray;
+    color: black;
+    width: 98%;
+    box-shadow: 3px 3px 3px 2px #797979;
+}
+
+article > h2 {
+    box-shadow: 3px 3px 3px 2px #797979;
+    padding-left: 6px;
+}
+article > p {
+    padding-left: 6px;
+}
+
+aside {
+    font-size: 8px;
+    color: green;
+    background-color: lightblue;
+    font-style: italic;
+    float: right;
+    width: 30%;
+}
+
+footer {
+    clear: both;
+    background-color: navy;
+    color: white;
+}
+
+.banner {
+    background-color: navy;
+    color: white;
+}
