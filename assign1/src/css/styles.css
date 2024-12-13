@@ -1,0 +1,363 @@
+/* Variables */
+:root {
+    --text: #FCFCFC;
+    --background: #181818;
+    --primary: #343A40;
+    --secondary: #E83988;
+    --accent: #27D4F2;
+}
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+}
+/* Fonts */
+h1, h2, h3, h4, h5, h6, p, a, li, label{
+    font-family: Arial, sans-serif;
+}
+h2, h3 {
+    margin-bottom: 0%;
+}
+
+/* Nav bar */
+nav {
+    overflow: hidden;
+    height: auto;
+    /* background-color: var(--secondary); */
+}
+/* Horizontal list for navbar */
+nav > ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+/* Link styles for navbar*/
+nav > ul > li > a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    color: var(--text);
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 12px 12px;
+    transition: 400ms;
+    border-radius: 0;
+}
+/* Link hover background color */
+nav > ul > li > a:hover {
+    background-color: var(--text);
+    color: var(--secondary);
+}
+/* Selected Page */
+.active {
+    background-color: var(--accent);
+}
+
+/* Nav mobile styles */
+/* Make the buttons full width (if we were using JS I would have hidden them behind a button) */
+@media screen and (max-width: 768px) {
+    nav > ul > li > a {
+        width: 100%;
+    }
+}
+
+/* Center main title */
+#mainTitle {
+    color: var(--text);
+    text-align: center;
+    position: relative;
+}
+#mainTitle > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#mainTitle h1 {
+    font-size: 4em;
+}
+/* background image for title */
+#mainTitle > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: brightness(75%);
+}
+
+/* List styles */
+ul {
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+}
+
+/* Article Styles */
+article {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--text);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Button/Link Styles */
+button, a {
+    color: var(--accent);
+    text-decoration: none;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 400ms;
+    border: none;
+}
+button:hover, a:hover {
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--primary);
+    color: var(--text);
+    /* text-align: center; */
+    padding: 10px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 0;
+    background-color: var(--primary);
+    text-align: left;
+    padding: 0;
+}
+footer a:hover {
+    background-color: var(--primary);
+    color: var(--text);
+}
+footer ul {
+    list-style-type: symbols("-");
+    padding-left: 3%;
+}
+
+/* Table styles for Timetable */
+table {
+    width: 96%;
+    border-collapse: collapse;
+    margin: 2%;
+}
+th, td {
+    border: 1px solid var(--text);
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: var(--accent);
+    color: var(--text);
+}
+td:nth-child(1) {
+    background-color: var(--secondary);
+}
+tr{
+    background-color: var(--background);
+}
+tr:nth-child(even) {
+    background-color: var(--background);
+}
+tr:nth-child(odd) {
+    background-color: var(--primary);
+}
+/* Unit Colors */
+.TNE10005 {
+    background-color: #004e5c;
+}
+.COS10005 {
+    background-color: #2c0058;
+}
+.ICT10022 {
+    background-color: #005806;
+}
+.UEE40120 {
+    background-color: #583c00;
+}
+
+/* Table Mobile Styles */
+/* Shrinks the font size and padding, adds a scroll bar to fit the width without making the font size unreadable */
+@media screen and (max-width: 768px) {
+    table {
+        /* width: 96%; */
+        overflow: auto;
+        display: block;
+    }
+    th, td {
+        padding: 5px;
+    }
+    p {
+        font-size: 0.8em;
+    }
+}
+
+/* Contact form input styles */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: none;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background-color: var(--background);
+    color: var(--text);
+}
+/* Form styles */
+form {
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Mobile form styles */
+@media screen and (max-width: 768px) {
+    form {
+        width: 96%;
+    }
+}
+
+/* Home page, show  */
+.splitContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+.splitContainer > div {
+    float: left;
+    width: 45%;
+}
+.splitContainer > img {
+    float: right;
+    width: 45%;
+}
+
+/* Mobile Styles - Make the boxes vertical and change the order so its alternating between text and images */
+@media screen and (max-width: 768px) {
+    .splitContainer {
+        flex-direction: column;
+    }
+    .splitContainer > div {
+        width: 100%;
+    }
+    .splitContainer > img {
+        width: 100%;
+        padding-top: 16px;
+    }
+    .splitContainer:nth-of-type(even) > img {
+        order: 1;
+    }
+}
+
+/* Code block styles */
+pre {
+    background-color: var(--background);
+    color: var(--text);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: left;
+}
+.codeExample{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+.codeExample > div:nth-child(even) {
+    float: left;
+    width: 50%;
+}
+.codeExample > div:nth-child(odd) {
+    float: right;
+    width: 50%;
+}
+
+/* Mobile Styles - Make the boxes vertical */
+@media screen and (max-width: 768px) {
+    .codeExample {
+        flex-direction: column;
+        width: 98%;
+    }
+    .codeExample > div {
+        width: 98%;
+    }
+    .codeExample > div:nth-child(even) {
+        float: left;
+        width: 98%;
+    }
+    .codeExample > div:nth-child(odd) {
+        float: right;
+        width: 98%;
+    }
+}
+
+/* Pulsing animation */
+.pulseAnimation {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary);
+    animation-name: pulseAnim;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    margin: auto;
+}
+@keyframes pulseAnim {
+    0%   {background-color: var(--secondary);}
+    50%  {background-color: var(--accent);}
+    100% {background-color: var(--secondary);}
+}
+
+/* Spinning animation */
+.spinAnimation {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary);
+    animation-name: spinAnim;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin: auto;
+}
+@keyframes spinAnim {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* Grow/hover animation */
+.growAnimation {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary);
+    animation-name: none;
+    margin: auto;
+}
+.growAnimation:hover {
+    animation-name: growAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes growAnim {
+    0%   {transform: scale(1);}
+    50%  {transform: scale(1.25);}
+    100% {transform: scale(1);}
+}
