@@ -1,6 +1,6 @@
 # Swinburne - COS10005 Web Development
 
-All the labs I completed for COS10005 Web Development at Swinburne. I've made some minor changes to the original files to remove any personal information and some images.
+All the labs I completed for COS10005 Web Development at Swinburne. I've made some minor changes to the original files to remove any personal information and some images. All images included are from [unsplash](https://unsplash.com/). There may be some minor changes to the original files for privacy or functionality reasons.
 
 ## Labs
 
