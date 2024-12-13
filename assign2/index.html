@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Development Assignment 2">
+    <meta name="keywords" content="HTML Markup">
+    <meta name="author" content="Name - ID">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div id="skipLink">
+                <a href="#main">Skip to main content</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="order.html">Order Now</a></li>
+                    <li><a href="features.html">Features</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction -->
+        <section id="mainTitle">
+            <img src="images/HomeBanner.jpg" alt="Banner image ice cream cones with sprinkles">
+            <div>
+                <h1>Sweet Life</h1>
+            </div>
+        </section>
+
+        <article>
+            <h2>Welcome!</h2>
+
+            <!-- History -->
+            <section class="infoSection" id="main">
+                <h3>Our History</h3>
+                <p>Founded in 2020, Sweet Life has been providing the best ice cream in the area for over a year. We pride ourselves on our delicious flavours and friendly service. We are always looking for new ways to improve our service and provide the best experience for our customers.</p>
+            </section>
+
+            <!-- Menu/available/featured stuff (min 3) -->
+            <section class="infoSection">
+                <h3>Featured Items</h3>
+                <!-- Horizontal list of items -->
+                <ul class="imagesList">
+                    <li>
+                        <img src="images/VanillaIceCream.jpg" alt="Vanilla ice cream cone">
+                        <h4>Vanilla Ice Cream</h4>
+                        <p>Our classic vanilla ice cream is a favourite among our customers. Made with real vanilla beans, this ice cream is sure to satisfy your sweet tooth.</p>
+                    </li>
+                    <li>
+                        <img src="images/ChocolateIceCream.jpg" alt="Chocolate ice cream cone">
+                        <h4>Chocolate Ice Cream</h4>
+                        <p>Our rich and creamy chocolate ice cream is a must try for any chocolate lover. Made with real cocoa, this ice cream is sure to satisfy your cravings.</p>
+                    </li>
+                    <li>
+                        <img src="images/StrawberryIceCream.jpg" alt="Strawberry ice cream cone">
+                        <h4>Strawberry Ice Cream</h4>
+                        <p>Our delicious strawberry ice cream is made with real strawberries. This ice cream is perfect for those who love the taste of fresh strawberries.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Location -->
+            <section id="map" class="infoSection">
+                <h3>Find Us</h3>
+                <iframe id="mapEmbed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100852.13850031518!2d144.89475904335936!3d-37.822150399999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642326bae5aaf%3A0x75e96bbd4988f769!2sSwinburne%20University%20of%20Technology!5e0!3m2!1sen!2sau!4v1716605417458!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>John St, Hawthorn VIC 3122</p>
+            </section>
+        </article>
+
+        <footer>
+            <p>&copy; 2024 Sweet Life. All rights reserved.</p>
+            <p>All images from unsplash.com</p>
+        </footer>
+    </main>
+</body>
+</html>

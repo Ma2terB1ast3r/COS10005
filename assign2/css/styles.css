@@ -1,0 +1,290 @@
+/* Variables */
+:root {
+    --text: #0b0b0b;
+    --background: #d3faff;
+    --primary: #fdfdfd;
+    --secondary: #E83988;
+    --accent: #27D4F2;
+    --valid: #51ff51;
+    --invalid: #ed4c4c;
+}
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+}
+/* Fonts */
+h1, h2, h3, h4, h5, h6, p, a, li, label{
+    font-family: Arial, sans-serif;
+}
+/* Remove bottom margin from sub headings and center */
+h2, h3, h4, h5, h6 {
+    margin-bottom: 0%;
+    text-align: center;
+}
+
+/* Heading font sizes */
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+h4 {
+    font-size: 1.25em;
+}
+
+/* Nav bar */
+nav {
+    overflow: hidden;
+    height: auto;
+}
+/* Horizontal list for navbar */
+nav > ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+/* Link styles for navbar*/
+nav > ul > li > a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    color: var(--text);
+    background-color: var(--secondary);
+    text-align: center;
+    padding: 12px 12px;
+    transition: 400ms;
+    border-radius: 0;
+}
+/* Link hover background color */
+nav > ul > li > a:hover {
+    background-color: var(--text);
+    color: var(--secondary);
+}
+/* Selected Page */
+.active {
+    background-color: var(--accent);
+}
+
+/* Nav mobile styles */
+@media screen and (max-width: 768px) {
+    nav > ul > li > a {
+        width: 100%;
+    }
+}
+
+/* Sections that aren't the mainTitle banner */
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    width: 98%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.infoSection > h2 {
+    margin-bottom: 2%;
+}
+
+/* Carousel styles featured items */
+.imagesList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    width: 100%;
+    padding: 0px;
+}
+.imagesList img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 1%;
+}
+.imagesList > img:hover {
+    filter: brightness(95%);
+}
+.imagesList > li {
+    display: inline;
+    margin: 1%;
+    width: 100%;
+    height: 100%;
+}
+
+/* Embedded map styles */
+#mapEmbed {
+    width: 98%;
+    height: 400px;
+    margin-top: 2%;
+}
+
+/* Title banner/title */
+#mainTitle {
+    color: var(--text);
+    text-align: center;
+    position: relative;
+}
+#mainTitle > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#mainTitle h1 {
+    font-size: 4em;
+}
+#mainTitle > img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 -10px;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--accent);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    width: 80%;
+}
+form h3 {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Form input styles */
+label, input[type=text], input[type=email], input[type=tel], input[type=password], select {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+}
+input[type=text], input[type=email], input[type=tel], input[type=password], select {
+    background-color: var(--primary);
+    border-radius: 6px;
+    border-color: var(--accent);
+    border-style: solid;
+    border-width: 4px;
+    height: 32px;
+    /* width: 50%; */
+    transition: 500ms;
+}
+
+/* Checkbox and radio styles */
+input[type=checkbox], input[type=radio] {
+    display: inline;
+    margin-right: 8px;
+    /* set colors */
+    background-color: var(--primary);
+    border-radius: 50%;
+    border-color: var(--secondary);
+    border-style: solid;
+    border-width: 4px;
+    height: 16px;
+    width: 16px;
+    transition: 500ms;
+}
+
+/* Focus styles */
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, input[type=password]:focus, select:focus {
+    border-color: var(--accent);
+}
+
+/* Fieldset styles */
+fieldset {
+    border: 2px solid var(--accent);
+    border-radius: 6px;
+    padding: 12px;
+    margin: 12px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Group of inputs */
+.inputCluster{
+    width: 100%;
+}
+
+/* Valid and invalid input styles */
+.valid:enabled {
+    border-color: var(--valid);
+}
+.invalid:enabled {
+    border-color: var(--invalid);
+}
+
+/* Button styles */
+button {
+    background-color: var(--secondary);
+    color: var(--text);
+    border-radius: 6px;
+    border-color: var(--secondary);
+    border-style: solid;
+    border-width: 6px;
+    height: 38px;
+    width: 46%;
+    transition: 500ms;
+    margin: 6px;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.buttonCluster {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+/* Skip Link */
+#skipLink a {
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    color: var(--text);
+    border-right: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    background: var(--primary);
+    transition: 100ms;
+}
+#skipLink a:focus {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 48px;
+}

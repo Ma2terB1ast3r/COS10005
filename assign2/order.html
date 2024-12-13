@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Development Assignment 2">
+    <meta name="keywords" content="HTML Markup">
+    <meta name="author" content="Name - ID">
+    <title>Order</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script defer src="js/validate_order.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <div id="skipLink">
+                <a href="#main">Skip to main content</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="order.html" class="active">Order Now</a></li>
+                    <li><a href="features.html">Features</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction -->
+        <section id="mainTitle">
+            <img src="images/HomeBanner.jpg" alt="Banner image ice cream cones with sprinkles">
+            <div>
+                <h1>Order Now!</h1>
+            </div>
+        </section>
+
+        <article>
+            <h2>Place an order</h2>
+
+            <!-- Order Form -->
+            <section id="main" class="infoSection">
+                <form id="orderForm" method="POST" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                    <!-- Customer Details -->
+                    <div id="personalDetailsCluster" class="inputCluster">
+                        <h3>Personal Details</h3>
+                        <label>Full Name: <input type="text" name="fullName" id="fullName"></label>
+                        <label>Contact Number: <input type="tel" name="contactNumber" id="contactNumber"></label>
+                        <label>Email: <input type="email" name="email" id="email"></label>
+                    </div>
+
+                    <!-- Collection Method -->
+                    <fieldset id="deliveryType">
+                        <legend>Delivery or Pickup?:</legend>
+                        <label><input type="radio" name="deliveryType" value="delivery" checked> Delivery</label>
+                        <label><input type="radio" name="deliveryType" value="pickup"> Pickup</label>
+                    </fieldset>
+
+                    <!-- Delivery address (if delivery) -->
+                    <div id="deliveryAddressCluster" class="inputCluster">
+                        <h3>Delivery Address</h3>
+                        <label>Street Address: <input type="text" name="deliveryAddress" id="deliveryAddress"></label>
+                        <label>City: <input type="text" name="city" id="deliveryCity"></label>
+                        <label>State: <input type="text" name="state" id="deliveryState"></label>
+                        <label>Postal Code: <input type="text" name="postcode" id="deliveryPostcode"></label>
+                    </div>
+
+                    <!-- Payment Method -->
+                        <fieldset id="paymentMethod">
+                            <legend>Payment Method:</legend>
+                            <label><input name="paymentMethod" type="radio" value="online" checked> Online</label>
+                            <label><input name="paymentMethod" type="radio" value="pickup"> At Pickup</label>
+                        </fieldset>
+
+                    <!-- Online Payment Details (if online payment) -->
+                    <div id="onlinePaymentCluster" class="inputCluster">
+                        <h3>Card Details</h3>
+                        <label>Card Type: <select id="cardType" name="cardType">
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">MasterCard</option>
+                            <option value="amex">American Express</option>
+                        </select></label>
+                        <label>Card Holder Name: <input type="text" id="cardName" name="cardName"></label>
+                        <label>Card Number: <input type="text" id="cardNumber" name="cardNumbers"></label>
+                        <label>Expiry Date: <input type="text" id="cardExpiry" name="cardExpiry"></label>
+                        <label>CVV: <input type="text" id="cardCVV" name="cardCVV"></label>
+
+                        <h3>Billing Address Info</h3>
+                        <label>Same as delivery address? <input id="sameAddress" type="checkbox"></label>
+                        <label>Billing Address: <input type="text" id="billingAddress" name="billingAddress"></label>
+                        <label>City: <input type="text" id="billingCity" name="billingCity"></label>
+                        <label>State: <input type="text" id="billingState" name="billingState"></label>
+                        <label>Postal Code: <input type="text" id="billingPostcode" name="billingPostcode"></label>
+                    </div>
+
+                    <button type="submit">Order</button>
+                </form>
+            </section>
+        </article>
+
+        <footer>
+            <p>&copy; 2024 Sweet Life. All rights reserved.</p>
+            <p>All images from unsplash.com</p>
+        </footer>
+    </main>
+</body>
+</html>
